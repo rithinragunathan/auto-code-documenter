@@ -1,0 +1,19 @@
+# Core dependencies for RAG pipeline
+chromadb>=1.5.5
+google-genai>=1.68.0
+python-dotenv
+
+# AST parsing
+tree-sitter==0.23.2
+tree-sitter-java==0.23.5
+tree-sitter-python==0.23.6
+
+# Embeddings
+sentence-transformers
+
+# Utilities
+pathspec>=1.0.4
+onnxruntime<1.24
+
+# Optional: for CLI utilities
+langchain

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+
+# Env files
+.env
+
+# Chroma / vector DB
+chroma_store/
+
+# Misc
+*.log
