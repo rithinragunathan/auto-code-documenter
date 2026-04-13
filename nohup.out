@@ -1,0 +1,75 @@
+2026-04-12 18:40:27,273 [    553]   WARN - #c.i.i.p.PluginManager - matterhorn.ej-ui.backend.server.main has accessibility problem which is currently ignored: it depends on module 'intellij.ml.llm.agents.acp' which private visibility in 'com.intellij.ml.llm' plugin
+2026-04-12 18:40:27,334 [    614]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.openapi.project.impl.ProjectStoreFactory: com.intellij.configurationScript.providers.ConfigurationScriptProjectStoreFactory attempts to override com.intellij.configurationStore.PlatformLangProjectStoreFactory, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-04-12 18:40:27,337 [    617]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAieProvisionRepository: com.intellij.ml.llm.matterhorn.activation.data.impl.enterprise.JunieAieProvisionRepositoryImpl attempts to override com.intellij.ml.llm.matterhorn.activation.data.repos.JunieNoProvisionRepositoryImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-04-12 18:40:27,343 [    623]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.modcommand.ModCommandExecutor: com.jetbrains.rdserver.ui.intentions.RemoteModCommandExecutor attempts to override com.intellij.lang.impl.modcommand.ModCommandExecutorImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-04-12 18:40:27,428 [    708]   WARN - #c.i.m.l.t.AIAssistantTelemetryExporterKt - No Langfuse auth string found.
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+SLF4J(E): A service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.jul.JULServiceProvider not a subtype
+2026-04-12 18:40:27,793 [   1073]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - Discovery connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+2026-04-12 18:40:27,920 [   1200]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Cannot find scheme: Islands Light from plugins: com.intellij.ml.llm
+2026-04-12 18:40:28.568 [DBG] [oshi.util.FileUtil] No {} file found from ClassLoader {}:[Ljava.lang.Object;@7f3a5982
+2026-04-12 18:40:28.592 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@586ebf52
+2026-04-12 18:40:28.593 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@328c69b5
+2026-04-12 18:40:28.598 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@59c3a0aa
+2026-04-12 18:40:28.605 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@30e2f52a
+2026-04-12 18:40:28.606 [DBG] [oshi.software.os.linux.LinuxOperatingSystem] os-release: {}:[Ljava.lang.Object;@2d130a44
+2026-04-12 18:40:28.606 [DBG] [oshi.software.os.linux.LinuxOperatingSystem] os-release: {}:[Ljava.lang.Object;@4f906661
+2026-04-12 18:40:28.606 [DBG] [oshi.software.os.linux.LinuxOperatingSystem] os-release: {}:[Ljava.lang.Object;@4d661651
+2026-04-12 18:40:28.607 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5f7e975d
+2026-04-12 18:40:28.615 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@641c65e5
+2026-04-12 18:40:28.616 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@6c2b5cc4
+2026-04-12 18:40:28.616 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@61726258
+2026-04-12 18:40:28.618 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@611f574a
+2026-04-12 18:40:28.618 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@662b35c1
+2026-04-12 18:40:28.619 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@50d098bc
+2026-04-12 18:40:28.620 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@397cf649
+2026-04-12 18:40:28.620 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@646599a
+2026-04-12 18:40:30,855 [   4135]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+2026-04-12 18:40:31,016 [   4296]   WARN - #o.j.i.maven - MavenProjectsTree is inconsistent
+2026-04-12 18:40:31,025 [   4305]   WARN - #o.j.i.maven - updateAllMavenProjects started: incremental=false, MavenProjectsManager.onProjectStartup AutoDocx
+2026-04-12 18:40:31,098 [   4378]   WARN - #c.i.v.g.r.GitRepositoriesHolder - State of repository RepositoryId(projectId=ProjectId#t4cvtsejnm2nkjm7m0md, rootPath=/home/shadowshell/projects/AutoDocx) is not synchronized. Known repositories are: 
+2026-04-12 18:40:31,128 [   4408]   WARN - #c.i.m.l.c.q.QuotaManager2Impl - Quota refill state was updated by another thread, wanted to update to Error(exception=com.intellij.ml.llm.core.quota.ResultDoesNotMatchConditionException: Returned result does not match the condition, previous=null)
+2026-04-12 18:40:31,144 [   4424]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - /mcp-servers connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+2026-04-12 18:40:32,605 [   5885]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-12 18:40:32,606 [   5886]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-12 18:40:32,606 [   5886]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-12 18:40:32,606 [   5886]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-12 18:40:32,606 [   5886]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-12 18:40:32,607 [   5887]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-12 18:40:32,607 [   5887]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-12 18:40:33,701 [   6981]   WARN - #c.i.n.i.NotificationGroupManagerImpl - Notification group Junie is already registered (group=com.intellij.notification.NotificationGroup@3527164e). Plugin descriptor: ContentModuleDescriptor(id=matterhorn.ej-ui.backend.main, package=com.intellij.ml.llm.matterhorn.junie.backend) <- PluginMainDescriptor(name=Junie, the AI coding agent by JetBrains, id=org.jetbrains.junie, version=261.1218.96, package=com.intellij.ml.llm.matterhorn.ej.plugin, isBundled=false, path=~/.local/share/JetBrains/IntelliJIdea2026.1/ej)
+2026-04-12 18:40:33,830 [   7110]   WARN - #o.j.i.maven - updateAllMavenProjects finished: incremental=false, MavenProjectsManager.onProjectStartup AutoDocx
+2026-04-12 18:41:28.625 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5c918234
+2026-04-12 18:41:28.625 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@7eb47966
+2026-04-12 18:41:28.625 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3e1339b7
+2026-04-12 18:41:28.625 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2ede75d9
+2026-04-12 18:41:28.626 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@7e8ed214
+2026-04-12 18:41:28.626 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@232cfbea
+2026-04-12 18:42:28.630 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@7cdea511
+2026-04-12 18:42:28.631 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@209b4324
+2026-04-12 18:42:28.631 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@33d0a75e
+2026-04-12 18:42:28.631 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@36243a3c
+2026-04-12 18:42:28.631 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3fdbe7c4
+2026-04-12 18:42:28.631 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@45230178
+2026-04-12 18:43:28.640 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@29cf5f12
+2026-04-12 18:43:28.641 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1ff11336
+2026-04-12 18:43:28.641 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5d154ff0
+2026-04-12 18:43:28.641 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@54838178
+2026-04-12 18:43:28.641 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@7676335
+2026-04-12 18:43:28.641 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1018a84c
+2026-04-12 18:43:40,959 [ 194239]   WARN - #c.i.e.v.VMOptionsParser - Option --help is not localized. Output of java command will be used instead. Please, localize it in VMOptionsBundle
+2026-04-12 18:43:40,959 [ 194239]   WARN - #c.i.e.v.VMOptionsParser - Option --help-extra is not localized. Output of java command will be used instead. Please, localize it in VMOptionsBundle
+2026-04-12 18:43:40,959 [ 194239]   WARN - #c.i.e.v.VMOptionsParser - Option --version is not localized. Output of java command will be used instead. Please, localize it in VMOptionsBundle
+2026-04-12 18:44:28.646 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@642f8172
+2026-04-12 18:44:28.646 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@4eabc792
+2026-04-12 18:44:28.646 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@24b006ab
+2026-04-12 18:44:28.646 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@55dde475
+2026-04-12 18:44:28.646 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@4d61cbad
+2026-04-12 18:44:28.646 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5d6602c4
+2026-04-12 18:45:05,327 [ 278607]   WARN - #c.i.o.v.i.LineStatusTrackerManager - Tracker is being held on dispose by EditorImpl[LightVirtualFile: /terminal_output]; file: /terminal_output
+2026-04-12 18:45:05.344 [TRC] [daemon-client-ws] /system/events/handleUri/64176 incoming exception java.util.concurrent.CancellationException: Job was cancelled
+2026-04-12 18:45:05.346 [TRC] [daemon-client-ws] /system/events/handleUri/64176 request failed kotlinx.coroutines.JobCancellationException: Job was cancelled
