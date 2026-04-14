@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDocx - Code Analysis with LLM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 30px;
+            min-height: 600px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        textarea {
+            min-height: 250px;
+            resize: vertical;
+            font-weight: normal;
+        }
+
+        button {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button-group button {
+            flex: 1;
+        }
+
+        .response-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #responseOutput {
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .response-metadata {
+            margin-top: 15px;
+            padding: 10px;
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            border-radius: 3px;
+        }
+
+        .metadata-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .metadata-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status.loading {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .loading-spinner {
+            display: none;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .history-section {
+            margin-top: 20px;
+        }
+
+        .history-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .history-item {
+            padding: 10px;
+            background: #f8f9fa;
+            border-left: 3px solid #667eea;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+
+        .history-item:hover {
+            background: #e8ecf1;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+            border: 1px solid #f5c6cb;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+            border: 1px solid #c3e6cb;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 AutoDocx</h1>
+            <p>Code Analysis with AI (LLM Integration)</p>
+        </div>
+
+        <div class="content">
+            <!-- Left Panel: Input -->
+            <div class="section">
+                <h2 class="section-title">📝 Code Input</h2>
+
+                <div class="error-message" id="errorMessage"></div>
+                <div class="success-message" id="successMessage"></div>
+
+                <div class="form-group">
+                    <label for="language">Programming Language:</label>
+                    <select id="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="csharp">C#</option>
+                        <option value="go">Go</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="requestType">Analysis Type:</label>
+                    <select id="requestType">
+                        <option value="documentation">Documentation Generation</option>
+                        <option value="review">Code Review</option>
+                        <option value="optimization">Optimization Suggestions</option>
+                        <option value="bug_fix">Bug Analysis</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="codeInput">Paste Your Code:</label>
+                    <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="prompt">Additional Instructions (Optional):</label>
+                    <input type="text" id="prompt" placeholder="e.g., Focus on performance optimization...">
+                </div>
+
+                <div class="button-group">
+                    <button onclick="analyzeCode()">
+                        🔍 Analyze Code
+                        <span class="loading-spinner" id="spinner"></span>
+                    </button>
+                    <button onclick="clearInput()">Clear</button>
+                </div>
+            </div>
+
+            <!-- Right Panel: Output -->
+            <div class="section response-container">
+                <h2 class="section-title">🎯 LLM Analysis Result</h2>
+
+                <div id="responseOutput">
+                    Ready for analysis. Submit code from the left panel.
+                </div>
+
+                <div class="response-metadata" id="metadata" style="display: none;">
+                    <div class="metadata-item">
+                        <span>Status:</span>
+                        <span class="status" id="statusBadge">SUCCESS</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span>Analysis ID:</span>
+                        <span id="analysisId">-</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span>Analysis Type:</span>
+                        <span id="metadataType">-</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span>Language:</span>
+                        <span id="metadataLanguage">-</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span>Timestamp:</span>
+                        <span id="metadataTime">-</span>
+                    </div>
+                </div>
+
+                <div class="history-section">
+                    <h3 style="font-size: 1.1em; margin-bottom: 10px;">📚 Analysis History</h3>
+                    <div class="history-list" id="historyList">
+                        <p style="color: #999;">No analyses yet...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>✨ Spring Boot Backend + OpenAI LLM Integration</p>
+            <p>Server: <span id="serverStatus">Checking...</span></p>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8080';
+        const analysisHistory = [];
+
+        // Check server health on load
+        window.addEventListener('load', checkServerHealth);
+
+        function checkServerHealth() {
+            fetch(`${API_BASE_URL}/health`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('serverStatus').textContent = '✅ Connected';
+                    document.getElementById('serverStatus').style.color = 'green';
+                })
+                .catch(error => {
+                    document.getElementById('serverStatus').textContent = '❌ Disconnected';
+                    document.getElementById('serverStatus').style.color = 'red';
+                    showError('Cannot connect to backend server. Make sure Spring Boot is running on port 8080.');
+                });
+        }
+
+        function analyzeCode() {
+            const code = document.getElementById('codeInput').value.trim();
+            const language = document.getElementById('language').value;
+            const requestType = document.getElementById('requestType').value;
+            const prompt = document.getElementById('prompt').value;
+
+            if (!code) {
+                showError('Please enter some code to analyze');
+                return;
+            }
+
+            // Show loading state
+            showLoading();
+
+            const request = {
+                code: code,
+                language: language,
+                request_type: requestType,
+                prompt: prompt
+            };
+
+            fetch(`${API_BASE_URL}/api/analyze-code`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(request)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                displayResponse(data);
+                addToHistory(data);
+                showSuccess('✅ Analysis completed successfully!');
+                hideLoading();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showError('Error analyzing code: ' + error.message);
+                hideLoading();
+            });
+        }
+
+        function displayResponse(data) {
+            const output = document.getElementById('responseOutput');
+            const metadata = document.getElementById('metadata');
+
+            // Display the analysis result
+            output.textContent = data.analysis_result;
+
+            // Display metadata
+            document.getElementById('statusBadge').textContent = data.status;
+            document.getElementById('statusBadge').className = `status ${data.status.toLowerCase()}`;
+            document.getElementById('analysisId').textContent = data.id;
+            document.getElementById('metadataType').textContent = data.request_type;
+            document.getElementById('metadataLanguage').textContent = data.original_code ? 'Code provided' : 'N/A';
+            document.getElementById('metadataTime').textContent = new Date(data.timestamp).toLocaleString();
+            metadata.style.display = 'block';
+        }
+
+        function addToHistory(data) {
+            analysisHistory.unshift(data);
+            updateHistoryList();
+        }
+
+        function updateHistoryList() {
+            const historyList = document.getElementById('historyList');
+            if (analysisHistory.length === 0) {
+                historyList.innerHTML = '<p style="color: #999;">No analyses yet...</p>';
+                return;
+            }
+
+            historyList.innerHTML = analysisHistory.slice(0, 5).map((item, index) => `
+                <div class="history-item" onclick="loadHistoryItem('${item.id}')">
+                    <strong>${item.request_type}</strong>
+                    <br>
+                    <small>ID: ${item.id.substring(0, 8)}... | ${new Date(item.timestamp).toLocaleTimeString()}</small>
+                </div>
+            `).join('');
+        }
+
+        function loadHistoryItem(id) {
+            const item = analysisHistory.find(h => h.id === id);
+            if (item) {
+                displayResponse(item);
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('codeInput').value = '';
+            document.getElementById('prompt').value = '';
+            document.getElementById('responseOutput').textContent = 'Analysis results will appear here...';
+            document.getElementById('metadata').style.display = 'none';
+        }
+
+        function showLoading() {
+            document.getElementById('spinner').style.display = 'inline-block';
+            document.getElementById('responseOutput').textContent = 'Analyzing code with LLM...';
+        }
+
+        function hideLoading() {
+            document.getElementById('spinner').style.display = 'none';
+        }
+
+        function showError(message) {
+            const errorMsg = document.getElementById('errorMessage');
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
+
+        function showSuccess(message) {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.textContent = message;
+            successMsg.style.display = 'block';
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

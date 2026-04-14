@@ -1,7 +1,15 @@
+# API Server
+flask>=2.3.0
+flask-cors>=4.0.0
+requests>=2.31.0
+
 # Core dependencies for RAG pipeline
 chromadb>=1.5.5
-google-genai>=1.68.0
 python-dotenv
+
+# LangChain and integrations
+langchain>=0.1.0
+langchain-google-genai>=0.0.1
 
 # AST parsing
 tree-sitter==0.23.2
@@ -14,6 +22,3 @@ sentence-transformers
 # Utilities
 pathspec>=1.0.4
 onnxruntime<1.24
-
-# Optional: for CLI utilities
-langchain

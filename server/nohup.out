@@ -183,3 +183,185 @@ org.slf4j.spi.SLF4JServiceProvider: org.slf4j.jul.JULServiceProvider not a subty
 2026-04-12 19:07:28.049 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@15e5837c
 2026-04-12 19:07:28.049 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@556e1157
 2026-04-12 19:07:28.049 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@291b6d43
+2026-04-13 15:59:13,928 [    836]   WARN - #c.i.i.p.PluginManager - matterhorn.ej-ui.backend.server.main has accessibility problem which is currently ignored: it depends on module 'intellij.ml.llm.agents.acp' which private visibility in 'com.intellij.ml.llm' plugin
+2026-04-13 15:59:14,056 [    964]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.openapi.project.impl.ProjectStoreFactory: com.intellij.configurationScript.providers.ConfigurationScriptProjectStoreFactory attempts to override com.intellij.configurationStore.PlatformLangProjectStoreFactory, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-04-13 15:59:14,061 [    969]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.ml.llm.matterhorn.activation.data.repos.JunieAieProvisionRepository: com.intellij.ml.llm.matterhorn.activation.data.impl.enterprise.JunieAieProvisionRepositoryImpl attempts to override com.intellij.ml.llm.matterhorn.activation.data.repos.JunieNoProvisionRepositoryImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-04-13 15:59:14,072 [    980]   WARN - #c.i.p.instanceContainer - InstanceNotOverridableException: Override failed for com.intellij.modcommand.ModCommandExecutor: com.jetbrains.rdserver.ui.intentions.RemoteModCommandExecutor attempts to override com.intellij.lang.impl.modcommand.ModCommandExecutorImpl, but the existing implementation is not overriddable (not declared as 'open=true')
+2026-04-13 15:59:14,282 [   1190]   WARN - #c.i.m.l.t.AIAssistantTelemetryExporterKt - No Langfuse auth string found.
+2026-04-13 15:59:14,530 [   1438]   WARN - #c.i.o.v.n.p.m.c.VFSContentStorageOverMMappedFile - Content map[/home/shadowshell/.cache/JetBrains/IntelliJIdea2026.1/caches/content.dat.hashToId] is empty (or dropped) while content storage is not: re-building map from the storage
+2026-04-13 15:59:14,530 [   1438]   WARN - #c.i.o.v.n.p.FSRecords - Records storage [/home/shadowshell/.cache/JetBrains/IntelliJIdea2026.1/caches/records.dat] was in use by process [OwnershipInfo{owner pid: 65349, acquired at: 1775999726914}] which is not exist now (wasn't closed properly/crashed?) -> re-acquiring forcibly
+2026-04-13 15:59:14,547 [   1455]   WARN - #c.i.o.v.n.p.PersistentFSLoader - [VFS load problem]: VFS wasn't safely shut down: records.wasClosedProperly is false
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+SLF4J(E): A service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.jul.JULServiceProvider not a subtype
+2026-04-13 15:59:14,832 [   1740]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - Discovery connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+2026-04-13 15:59:15,184 [   2092]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Cannot find scheme: Islands Light from plugins: com.intellij.ml.llm
+2026-04-13 15:59:16,211 [   3119]   WARN - #c.i.o.v.n.p.PersistentFSLoader - [VFS load problem]: NOT_CLOSED_PROPERLY recovered, no problems remain
+2026-04-13 15:59:16.827 [DBG] [oshi.util.FileUtil] No {} file found from ClassLoader {}:[Ljava.lang.Object;@20b2aeb1
+2026-04-13 15:59:16.854 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@84ce45c
+2026-04-13 15:59:16.860 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3bf2640
+2026-04-13 15:59:16.866 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@18a59022
+2026-04-13 15:59:16.871 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@4cc84339
+2026-04-13 15:59:16.872 [DBG] [oshi.software.os.linux.LinuxOperatingSystem] os-release: {}:[Ljava.lang.Object;@7b2f8c15
+2026-04-13 15:59:16.872 [DBG] [oshi.software.os.linux.LinuxOperatingSystem] os-release: {}:[Ljava.lang.Object;@646a1a9c
+2026-04-13 15:59:16.873 [DBG] [oshi.software.os.linux.LinuxOperatingSystem] os-release: {}:[Ljava.lang.Object;@4eacfd97
+2026-04-13 15:59:16.873 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@473bdddf
+2026-04-13 15:59:16.882 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1e498744
+2026-04-13 15:59:16.883 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3d6c851
+2026-04-13 15:59:16.883 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2ac1053f
+2026-04-13 15:59:16.884 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@c9e846f
+2026-04-13 15:59:16.884 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5ebf511f
+2026-04-13 15:59:16.885 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@6b1e8ed9
+2026-04-13 15:59:16.886 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3111cec1
+2026-04-13 15:59:16.886 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@15825655
+2026-04-13 15:59:22,937 [   9845]   WARN - #c.i.o.a.i.ActionUpdater - 4031 ms total to grab EDT 2 times to expand EditorMarkupModelImpl$StatusToolbarGroup#expandGroup@EditorInspectionsToolbar (com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusToolbarGroup). Use `ActionUpdateThread.BGT`.
+2026-04-13 15:59:24,212 [  11120]   WARN - #c.i.o.a.i.ActionUpdater - 4476 ms total to grab EDT 5 times to expand ToolWindowHeader$2#expandGroup@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2). Use `ActionUpdateThread.BGT`.
+2026-04-13 15:59:25,115 [  12023]   WARN - #c.i.v.l.u.StorageId$Directory - Failed to move /home/shadowshell/.cache/JetBrains/IntelliJIdea2026.1/vcs-log/server_32f4610e_9249bd68/index to /home/shadowshell/.cache/JetBrains/IntelliJIdea2026.1/vcs-log/server_32f4610e_9249bd68/index
+java.nio.file.NoSuchFileException: /home/shadowshell/.cache/JetBrains/IntelliJIdea2026.1/vcs-log/server_32f4610e_9249bd68/index
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:108)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:114)
+	at java.base/sun.nio.fs.UnixFileSystem.move(UnixFileSystem.java:845)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:289)
+	at com.intellij.platform.core.nio.fs.TracingFileSystemProvider.move(TracingFileSystemProvider.java:170)
+	at java.base/java.nio.file.Files.move(Files.java:1319)
+	at com.intellij.vcs.log.util.StorageId.cleanupAllStorageFiles(PersistentUtil.kt:58)
+	at com.intellij.vcs.log.data.VcsLogStorageImpl.cleanupStorageFiles(VcsLogStorageImpl.java:396)
+	at com.intellij.vcs.log.data.VcsLogStorageImpl.lambda$createStorageAndIndexBackend$4(VcsLogStorageImpl.java:389)
+	at com.intellij.util.io.IOUtil.openCleanOrResetBroken(IOUtil.java:318)
+	at com.intellij.vcs.log.data.VcsLogStorageImpl.createStorageAndIndexBackend(VcsLogStorageImpl.java:374)
+	at com.intellij.vcs.log.data.VcsLogData.createStorageAndIndex(VcsLogData.kt:360)
+	at com.intellij.vcs.log.data.VcsLogData.<init>(VcsLogData.kt:181)
+	at com.intellij.vcs.log.impl.VcsLogManager.<init>(VcsLogManager.kt:86)
+	at com.intellij.vcs.log.impl.IdeVcsLogManager.<init>(IdeVcsLogManager.kt:36)
+	at com.intellij.vcs.log.impl.IdeVcsProjectLog.createLogManager(IdeVcsProjectLog.kt:58)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase.getOrCreateLogManager(VcsProjectLogBase.kt:211)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase.access$getOrCreateLogManager(VcsProjectLogBase.kt:55)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase$getOrCreateLogManager$2.invokeSuspend(VcsProjectLogBase.kt:198)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase$getOrCreateLogManager$2.invoke(VcsProjectLogBase.kt)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase$getOrCreateLogManager$2.invoke(VcsProjectLogBase.kt)
+	at com.intellij.platform.backend.observation.PlatformActivityTrackerService$trackConfigurationActivity$2$1.invokeSuspend(PlatformActivityTrackerService.kt:76)
+	at com.intellij.platform.backend.observation.PlatformActivityTrackerService$trackConfigurationActivity$2$1.invoke(PlatformActivityTrackerService.kt)
+	at com.intellij.platform.backend.observation.PlatformActivityTrackerService$trackConfigurationActivity$2$1.invoke(PlatformActivityTrackerService.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:67)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.platform.backend.observation.PlatformActivityTrackerService.trackConfigurationActivity(PlatformActivityTrackerService.kt:75)
+	at com.intellij.platform.backend.observation.TrackingUtil.trackActivity(util.kt:23)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase.getOrCreateLogManager(VcsProjectLogBase.kt:197)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase.reinitUnsafe(VcsProjectLogBase.kt:173)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase.access$reinitUnsafe(VcsProjectLogBase.kt:55)
+	at com.intellij.vcs.log.impl.VcsProjectLogBase$reinitAsync$1.invokeSuspend(VcsProjectLogBase.kt:167)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:610)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runDefaultDispatcherTask(CoroutineScheduler.kt:1194)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:906)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:775)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:762)
+2026-04-13 15:59:25,122 [  12030]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+2026-04-13 15:59:25,347 [  12255]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-13 15:59:25,349 [  12257]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-13 15:59:25,349 [  12257]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-13 15:59:25,350 [  12258]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-13 15:59:25,350 [  12258]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-13 15:59:25,351 [  12259]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-13 15:59:25,352 [  12260]   WARN - #com.github.weisj.jsvg.parser.NodeMap - unsupported foreignObject
+2026-04-13 15:59:25,368 [  12276]   WARN - #c.i.v.g.r.GitRepositoriesHolder - State of repository RepositoryId(projectId=ProjectId#du1jiadkqhfrn45ms8ff, rootPath=/home/shadowshell/projects/AutoDocx) is not synchronized. Known repositories are: 
+2026-04-13 15:59:25,580 [  12488]   WARN - #c.i.s.c.i.StationSocketConnectionLoop - /mcp-servers connection failed with NoSuchFileException (/run/user/1000/jb.station.sock)
+2026-04-13 15:59:25,597 [  12505]   WARN - #c.i.m.l.c.q.QuotaManager2Impl - Quota refill state was updated by another thread, wanted to update to Error(exception=com.intellij.ml.llm.core.quota.ResultDoesNotMatchConditionException: Returned result does not match the condition, previous=null)
+2026-04-13 15:59:30,779 [  17687]   WARN - #c.i.n.i.NotificationGroupManagerImpl - Notification group Junie is already registered (group=com.intellij.notification.NotificationGroup@3a7b1de9). Plugin descriptor: ContentModuleDescriptor(id=matterhorn.ej-ui.backend.main, package=com.intellij.ml.llm.matterhorn.junie.backend) <- PluginMainDescriptor(name=Junie, the AI coding agent by JetBrains, id=org.jetbrains.junie, version=261.1218.96, package=com.intellij.ml.llm.matterhorn.ej.plugin, isBundled=false, path=~/.local/share/JetBrains/IntelliJIdea2026.1/ej)
+2026-04-13 16:00:16.895 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@6b053144
+2026-04-13 16:00:16.895 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@44c43e7
+2026-04-13 16:00:16.896 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@6c3d32ad
+2026-04-13 16:00:16.896 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@82da95f
+2026-04-13 16:00:16.896 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@4ae0360f
+2026-04-13 16:00:16.896 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2cd517cf
+2026-04-13 16:01:16.903 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5f1662c2
+2026-04-13 16:01:16.903 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@6a58692e
+2026-04-13 16:01:16.904 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@334e2a61
+2026-04-13 16:01:16.904 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@64aa603c
+2026-04-13 16:01:16.904 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@8461e19
+2026-04-13 16:01:16.904 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@217e0726
+2026-04-13 16:02:16.913 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@474ad362
+2026-04-13 16:02:16.914 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3d34a3c0
+2026-04-13 16:02:16.914 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@23894774
+2026-04-13 16:02:16.915 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@e6a3454
+2026-04-13 16:02:16.915 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1faa3738
+2026-04-13 16:02:16.915 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@798adae
+2026-04-13 16:03:16.923 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@30749580
+2026-04-13 16:03:16.923 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@74f30a2d
+2026-04-13 16:03:16.924 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@588b9924
+2026-04-13 16:03:16.924 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@605789e4
+2026-04-13 16:03:16.924 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@749bc8fb
+2026-04-13 16:03:16.925 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@18550627
+2026-04-13 16:04:16.933 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@615422f8
+2026-04-13 16:04:16.933 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1cfa9c6a
+2026-04-13 16:04:16.934 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2ee6aafd
+2026-04-13 16:04:16.934 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@4f6a3c5c
+2026-04-13 16:04:16.934 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@fe984ab
+2026-04-13 16:04:16.935 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@473850f0
+2026-04-13 16:05:16.942 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5a2a306b
+2026-04-13 16:05:16.942 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@4495d97c
+2026-04-13 16:05:16.943 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@59528770
+2026-04-13 16:05:16.943 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@c7f6f09
+2026-04-13 16:05:16.943 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@75dbf85
+2026-04-13 16:05:16.943 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@6d69d82b
+2026-04-13 16:06:16.953 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@215c3df8
+2026-04-13 16:06:16.953 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@c98e90c
+2026-04-13 16:06:16.953 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1d7ccb03
+2026-04-13 16:06:16.953 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@29e40861
+2026-04-13 16:06:16.953 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@69175358
+2026-04-13 16:06:16.953 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@220c17ff
+2026-04-13 16:07:16.960 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@25f67114
+2026-04-13 16:07:16.961 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3027d864
+2026-04-13 16:07:16.961 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2f96612c
+2026-04-13 16:07:16.961 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5fd362a4
+2026-04-13 16:07:16.961 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@49bbc69b
+2026-04-13 16:07:16.961 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@47d1d330
+2026-04-13 16:08:16.968 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2c3652ef
+2026-04-13 16:08:16.969 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@43d89799
+2026-04-13 16:08:16.969 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@58c73d21
+2026-04-13 16:08:16.969 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@43e123aa
+2026-04-13 16:08:16.969 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5ddea013
+2026-04-13 16:08:16.969 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5abd806e
+2026-04-13 16:09:15,062 [ 601970]   WARN - #c.i.m.l.c.c.u.AIAssistantUIUtil - quota and refill values are returned as null by platform, refill: null, quota: null
+2026-04-13 16:09:15,062 [ 601970]   WARN - #c.i.m.l.c.c.u.AIAssistantUIUtil - getQuotaUiLabelData returning unknown
+2026-04-13 16:09:16.975 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@43487a9a
+2026-04-13 16:09:16.975 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1f595088
+2026-04-13 16:09:16.975 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@433a2351
+2026-04-13 16:09:16.975 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3cb9b6df
+2026-04-13 16:09:16.976 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3c259778
+2026-04-13 16:09:16.976 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@692d4d64
+2026-04-13 16:10:16.984 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@77c8fc3c
+2026-04-13 16:10:16.984 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1bfb5de6
+2026-04-13 16:10:16.985 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3726b309
+2026-04-13 16:10:16.985 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2a9e038
+2026-04-13 16:10:16.985 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@32b0c54d
+2026-04-13 16:10:16.985 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@73e5aa90
+2026-04-13 16:11:16.992 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@3d4db7ef
+2026-04-13 16:11:16.992 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5b1c0b6a
+2026-04-13 16:11:16.993 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1ecea412
+2026-04-13 16:11:16.993 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@58367bc2
+2026-04-13 16:11:16.993 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@8145de4
+2026-04-13 16:11:16.993 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@33e840d7
+2026-04-13 16:12:16.999 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@5a76345d
+2026-04-13 16:12:17.000 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@239d0ded
+2026-04-13 16:12:17.000 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@36f7609d
+2026-04-13 16:12:17.000 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@43dbcc67
+2026-04-13 16:12:17.001 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@2864dc9d
+2026-04-13 16:12:17.001 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@63dd5e19
+2026-04-13 16:13:17.008 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@662392e1
+2026-04-13 16:13:17.009 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@34ef59dd
+2026-04-13 16:13:17.009 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@413d0625
+2026-04-13 16:13:17.009 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@6481c2c8
+2026-04-13 16:13:17.010 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@1ecfe023
+2026-04-13 16:13:17.010 [DBG] [oshi.util.FileUtil] Reading file {}:[Ljava.lang.Object;@50a06396
+2026-04-13 16:13:36,918 [ 863826]   WARN - #c.i.o.v.i.LineStatusTrackerManager - Tracker is being held on dispose by EditorImpl[LightVirtualFile: /terminal_output]; file: /terminal_output
+2026-04-13 16:13:36,918 [ 863826]   WARN - #c.i.o.v.i.LineStatusTrackerManager - Tracker is being held on dispose by EditorImpl[LightVirtualFile: /terminal_output]; file: /terminal_output
+2026-04-13 16:13:37.001 [TRC] [daemon-client-ws] /system/events/handleUri/6374 incoming exception java.util.concurrent.CancellationException: Job was cancelled
+2026-04-13 16:13:37.004 [TRC] [daemon-client-ws] /system/events/handleUri/6374 request failed kotlinx.coroutines.JobCancellationException: Job was cancelled
