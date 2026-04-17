@@ -18,29 +18,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.rithin.AutoDocx.model.CodeAnalysisRequest;
 import com.rithin.AutoDocx.model.CodeAnalysisResponse;
-import com.rithin.AutoDocx.service.HelloService;
 import com.rithin.AutoDocx.service.LLMService;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS})
 public class TestController {
 
-    private final HelloService helloService;
     private final LLMService llmService;
     
     // Store analysis results in memory
     private final Map<String, CodeAnalysisResponse> analysisResults = new ConcurrentHashMap<>();
 
     // Constructor Injection (IMPORTANT)
-    public TestController(HelloService helloService, LLMService llmService) {
-        this.helloService = helloService;
+    public TestController(LLMService llmService) {
+
         this.llmService = llmService;
     }
 
-    @GetMapping("/")
-    public String hello() {
-        return helloService.getMessage();
-    }
 
     @GetMapping("/health")
     public Map<String, Object> health() {
