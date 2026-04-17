@@ -1,4 +1,6 @@
-HELP.md
+*.md
+.gitignore
+*.sh
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -34,3 +36,4 @@ build/
 
 #linux
 nohup.out
+

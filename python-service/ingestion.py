@@ -31,7 +31,7 @@ from pathlib import Path
 
 from graph          import build_graph
 from chunker        import build_chunks
-import chromadb_store as db
+import chromadb_client as db
 
 
 # file extensions → language
