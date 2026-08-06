@@ -1,0 +1,37 @@
+.history-list {
+  margin-top: 20px;
+}
+
+.history-list h3 {
+  font-size: 1.05em;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.history-empty {
+  color: #999;
+  font-size: 0.9em;
+}
+
+.history-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: #f8f9fa;
+  border: none;
+  border-left: 3px solid #667eea;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #333;
+  font-family: inherit;
+}
+
+.history-item:hover {
+  background: #e8ecf1;
+}
+
+.history-item small {
+  color: #777;
+}
